@@ -15,7 +15,7 @@ Features described in this documentation are classified by release status:
   *Stable:*  These features will be maintained long-term and there should generally
   be no major performance limitations or gaps in documentation.
   We also expect to maintain backwards compatibility (although
-  breaking changes can happen and notice will be given one release ahead
+  breaking changes can happen and notice will be given once released ahead
   of time).
 
   *Beta:*  Features are tagged as Beta because the API may change based on
