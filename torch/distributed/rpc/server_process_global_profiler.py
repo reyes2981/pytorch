@@ -94,6 +94,7 @@ class _server_process_global_profile(profile):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.entered:bool = False
 
     def __enter__(self):
         """
@@ -145,7 +146,7 @@ class _server_process_global_profile(profile):
         process_global_function_events = []
         for thread_local_events in process_global_events:
             # Parse from ``Event``s to ``FunctionEvent``s.
-            thread_local_function_events = torch.autograd.profiler.parse_event_records(
+            thread_local_function_events = torch.autograd.profiler.parse_legacy_records(
                 thread_local_events
             )
             thread_local_function_events.sort(
